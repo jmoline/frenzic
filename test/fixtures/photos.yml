@@ -1,0 +1,19 @@
+one:
+  parent_id: 1
+  parent_type: MyString
+  owner_id: 1
+  photo_file_name: MyString
+  photo_content_type: MyString
+  photo_file_size: 1
+  photo_updated_at: 2009-10-27 14:10:55
+  title: MyString
+
+two:
+  parent_id: 1
+  parent_type: MyString
+  owner_id: 1
+  photo_file_name: MyString
+  photo_content_type: MyString
+  photo_file_size: 1
+  photo_updated_at: 2009-10-27 14:10:55
+  title: MyString

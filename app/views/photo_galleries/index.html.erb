@@ -1,0 +1,20 @@
+<% title "Photo Galleries" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Owner</th>
+  </tr>
+  <% for photo_gallery in @photo_galleries %>
+    <tr>
+      <td><%=h photo_gallery.title %></td>
+      <td><%=h photo_gallery.body %></td>
+      <td><%=h photo_gallery.owner_id %></td>
+      <td><%= link_to "Show", photo_gallery %></td>
+      <td><%= link_to "Edit", edit_photo_gallery_path(photo_gallery) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Photo Gallery", new_photo_gallery_path %></p>

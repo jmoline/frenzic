@@ -1,0 +1,36 @@
+<% form_for @photo do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :parent_id %><br />
+    <%= f.text_field :parent_id %>
+  </p>
+  <p>
+    <%= f.label :parent_type %><br />
+    <%= f.text_field :parent_type %>
+  </p>
+  <p>
+    <%= f.label :owner_id %><br />
+    <%= f.text_field :owner_id %>
+  </p>
+  <p>
+    <%= f.label :photo_file_name %><br />
+    <%= f.text_field :photo_file_name %>
+  </p>
+  <p>
+    <%= f.label :photo_content_type %><br />
+    <%= f.text_field :photo_content_type %>
+  </p>
+  <p>
+    <%= f.label :photo_file_size %><br />
+    <%= f.text_field :photo_file_size %>
+  </p>
+  <p>
+    <%= f.label :photo_updated_at %><br />
+    <%= f.datetime_select :photo_updated_at %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

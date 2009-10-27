@@ -1,0 +1,24 @@
+<% title "Posts" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Author</th>
+    <th>Parent</th>
+    <th>Parent Type</th>
+  </tr>
+  <% for post in @posts %>
+    <tr>
+      <td><%=h post.title %></td>
+      <td><%=h post.body %></td>
+      <td><%=h post.author_id %></td>
+      <td><%=h post.parent_id %></td>
+      <td><%=h post.parent_type %></td>
+      <td><%= link_to "Show", post %></td>
+      <td><%= link_to "Edit", edit_post_path(post) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Post", new_post_path %></p>

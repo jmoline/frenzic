@@ -1,0 +1,19 @@
+<% title "Photo Gallery" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @photo_gallery.title %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%=h @photo_gallery.body %>
+</p>
+<p>
+  <strong>Owner:</strong>
+  <%=h @photo_gallery.owner_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_photo_gallery_path(@photo_gallery) %> |
+  <%= link_to "View All", photo_galleries_path %>
+</p>
