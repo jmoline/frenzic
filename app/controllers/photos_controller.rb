@@ -4,8 +4,8 @@ class PhotosController < ApplicationController
   end
   
   def create
-    @photo = Photo.new(params[:photo])
-    if @photo.save
+    @photo = Photo.create(params[:photo])
+    if @photo.errors.blank?
       flash[:notice] = "Successfully created photo."
       redirect_to @photo
     else
@@ -18,6 +18,7 @@ class PhotosController < ApplicationController
   end
   
   def update
+
     @photo = Photo.find(params[:id])
     if @photo.update_attributes(params[:photo])
       flash[:notice] = "Successfully updated photo."

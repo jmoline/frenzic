@@ -1,37 +1,14 @@
 <% title "Photo" %>
 
-<p>
-  <strong>Parent:</strong>
-  <%=h @photo.parent_id %>
-</p>
-<p>
-  <strong>Parent Type:</strong>
-  <%=h @photo.parent_type %>
-</p>
-<p>
-  <strong>Owner:</strong>
-  <%=h @photo.owner_id %>
-</p>
-<p>
-  <strong>Photo File Name:</strong>
-  <%=h @photo.photo_file_name %>
-</p>
-<p>
-  <strong>Photo Content Type:</strong>
-  <%=h @photo.photo_content_type %>
-</p>
-<p>
-  <strong>Photo File Size:</strong>
-  <%=h @photo.photo_file_size %>
-</p>
-<p>
-  <strong>Photo Updated At:</strong>
-  <%=h @photo.photo_updated_at %>
-</p>
-<p>
-  <strong>Title:</strong>
+<div class="title">
   <%=h @photo.title %>
-</p>
+</div>
+
+<div class="photo_main">
+<%= image_tag @photo.photo.url(:large) %>
+</div>
+<span class="by-line">Uploaded By: <%=h @photo.owner.username %></span>
+
 
 <p>
   <%= link_to "Edit", edit_photo_path(@photo) %> |
